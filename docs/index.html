@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<!--begin::Head-->
+<head>
+  <title>CryptoStorage Documentation</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/svg+xml" href="img/logos/favicon.svg" />
+  <!--begin::Fonts-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+  <!--end::Fonts-->
+  <!--begin::Vendor Stylesheets(used by this page)-->
+  <link href="theme/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+  <!--end::Vendor Stylesheets-->
+  <!--begin::Global Stylesheets Bundle(used by all pages)-->
+  <link href="theme/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+  <link href="theme/css/style.bundle.css" rel="stylesheet" type="text/css" />
+  <!--end::Global Stylesheets Bundle-->
+  <!--begin::Custom CSS(used by this page)-->
+  <style>
+     code:not([class*=language-]) {
+      color: #9efeff;
+      background-color: #364135;
+      padding: 0.1rem 0;
+      margin: 0;
+     }
+  </style>
+  <!--end::Custom CSS-->
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body data-kt-name="metronic" id="kt_app_body"
+  data-kt-app-layout="dark-sidebar"
+  data-kt-app-header-fixed="true"
+  data-kt-app-header-fixed-mobile="true"
+  data-kt-app-sidebar-enabled="true"
+  data-kt-app-sidebar-fixed="true"
+  data-kt-app-sidebar-push-header="true"
+  data-kt-app-sidebar-push-toolbar="true"
+  data-kt-app-sidebar-push-footer="true"
+  data-kt-app-toolbar-enabled="false"
+  class="app-default">
+  <!--begin::App-->
+  <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+    <!--begin::Page-->
+    <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+      <!--begin::Header-->
+      <div id="kt_app_header" class="app-header">
+        <!--begin::Header container-->
+        <div class="app-container container-fluid d-flex align-items-stretch justify-content-between">
+          <!--begin::sidebar mobile toggle-->
+          <div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show sidebar menu">
+            <div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
+              <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+              <span class="svg-icon svg-icon-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="currentColor" />
+                  <path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="currentColor" />
+                </svg>
+              </span>
+              <!--end::Svg Icon-->
+            </div>
+          </div>
+          <!--end::sidebar mobile toggle-->
+          <!--begin::Mobile logo-->
+          <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+            <a href="/" class="d-lg-none">
+              <img alt="Logo" src="img/logos/default-small.svg" class="h-20px" />
+            </a>
+          </div>
+          <!--end::Mobile logo-->
+          <!--begin::Header wrapper-->
+          <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
+            <!--begin::Page title-->
+            <div data-kt-swapper="true" data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_wrapper'}" class="page-title d-flex flex-column justify-content-center flex-wrap me-3 mb-5 mb-lg-0">
+              <!--begin::Title-->
+              <h1 class="page-heading d-flex text-dark fw-bold fs-3 justify-content-center align-items-baseline my-0">
+              <!-- <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> -->
+                DevDocs<a href="#changelog" class="badge fw-semibold fs-7 px-2 ms-2 bg-body text-dark text-hover-primary shadow-sm">v1.0.0</a>
+              </h1>
+              <!--end::Title-->
+            </div>
+            <!--end::Page title-->
+            <!--begin::Navbar-->
+            <div class="app-navbar flex-shrink-0">
+              <!--begin::Search-->
+              <div id="kt_docs_search" class="d-flex align-items-center w-lg-200px me-2 me-lg-3" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu" data-kt-search-responsive="lg" data-kt-menu-trigger="auto" data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end">
+                <!--begin::Tablet and mobile search toggle-->
+                <div data-kt-search-element="toggle" class="d-flex d-lg-none align-items-center">
+                  <div class="btn btn-icon btn-color-gray-700 btn-active-color-primary bg-body w-40px h-40px">
+                    <!--begin::Svg Icon | path: icons/duotune/general/gen004.svg-->
+                    <span class="svg-icon svg-icon-2">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.7 18.9L18.6 15.8C17.9 16.9 16.9 17.9 15.8 18.6L18.9 21.7C19.3 22.1 19.9 22.1 20.3 21.7L21.7 20.3C22.1 19.9 22.1 19.3 21.7 18.9Z" fill="currentColor" />
+                        <path opacity="0.3" d="M11 20C6 20 2 16 2 11C2 6 6 2 11 2C16 2 20 6 20 11C20 16 16 20 11 20ZM11 4C7.1 4 4 7.1 4 11C4 14.9 7.1 18 11 18C14.9 18 18 14.9 18 11C18 7.1 14.9 4 11 4ZM8 11C8 9.3 9.3 8 11 8C11.6 8 12 7.6 12 7C12 6.4 11.6 6 11 6C8.2 6 6 8.2 6 11C6 11.6 6.4 12 7 12C7.6 12 8 11.6 8 11Z" fill="currentColor" />
+                      </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                  </div>
+                </div>
+                <!--end::Tablet and mobile search toggle-->
+                <!--begin::Form-->
+                <form data-kt-search-element="form" class="d-none d-lg-block w-100 mb-5 mb-lg-0 position-relative" autocomplete="off">
+                  <!--begin::Hidden input(Added to disable form autocomplete)-->
+                  <input type="hidden" />
+                  <!--end::Hidden input-->
+                  <!--begin::Icon-->
+                  <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                  <span class="svg-icon svg-icon-2 svg-icon-gray-700 position-absolute top-50 translate-middle-y ms-4">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+                      <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <!--end::Svg Icon-->
+                  <!--end::Icon-->
+                  <!--begin::Input-->
+                  <input type="text" class="form-control form-control-solid h-40px bg-body ps-13 fs-7" name="search" value="" placeholder="Search..." data-kt-search-element="input" />
+                  <!--end::Input-->
+                  <!--begin::Spinner-->
+                  <span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-5" data-kt-search-element="spinner">
+                    <span class="spinner-border h-15px w-15px align-middle text-gray-400"></span>
+                  </span>
+                  <!--end::Spinner-->
+                  <!--begin::Reset-->
+                  <span class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-4" data-kt-search-element="clear">
+                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                    <span class="svg-icon svg-icon-2 me-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                        <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                      </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                  </span>
+                  <!--end::Reset-->
+                </form>
+                <!--end::Form-->
+                <!--begin::Menu-->
+                <div data-kt-search-element="content" class="menu menu-sub menu-sub-dropdown w-300px w-md-350px py-7 ps-7 pe-5 overflow-hidden">
+                  <!--begin::Wrapper-->
+                  <div data-kt-search-element="wrapper">
+                    <!--begin::Search results-->
+                    <div data-kt-search-element="results" class="d-none">
+                      <!--begin::Items-->
+                      <div id="searchResults" class="scroll-y mh-200px mh-lg-350px">
+                      </div>
+                      <!--end::Items-->
+                    </div>
+                    <!--end::Search results-->
+                    <!--begin::Recently viewed-->
+                    <div class="mb-0" data-kt-search-element="main">
+                      <!--begin::Heading-->
+                      <div class="d-flex flex-stack fw-semibold mb-2">
+                        <!--begin::Label-->
+                        <span class="text-muted fs-base me-2">Suggestions:</span>
+                        <!--end::Label-->
+                      </div>
+                      <!--end::Heading-->
+                      <!--begin::Items-->
+                      <div id="searchRecently" class="scroll-y mh-200px mh-lg-325px">
+                      </div>
+                      <!--end::Items-->
+                    </div>
+                    <!--end::Recently viewed-->
+                    <!--begin::Empty-->
+                    <div data-kt-search-element="empty" class="text-center d-none">
+                      <!--begin::Icon-->
+                      <div class="pt-10 pb-5">
+                        <!--begin::Svg Icon | path: icons/duotune/files/fil024.svg-->
+                        <span class="svg-icon svg-icon-4x opacity-50">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.3" d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" fill="currentColor" />
+                            <path d="M20 8L14 2V6C14 7.10457 14.8954 8 16 8H20Z" fill="currentColor" />
+                            <rect x="13.6993" y="13.6656" width="4.42828" height="1.73089" rx="0.865447" transform="rotate(45 13.6993 13.6656)" fill="currentColor" />
+                            <path d="M15 12C15 14.2 13.2 16 11 16C8.8 16 7 14.2 7 12C7 9.8 8.8 8 11 8C13.2 8 15 9.8 15 12ZM11 9.6C9.68 9.6 8.6 10.68 8.6 12C8.6 13.32 9.68 14.4 11 14.4C12.32 14.4 13.4 13.32 13.4 12C13.4 10.68 12.32 9.6 11 9.6Z" fill="currentColor" />
+                          </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                      </div>
+                      <!--end::Icon-->
+                      <!--begin::Message-->
+                      <div class="pb-15 fw-semibold">
+                        <h3 class="text-gray-600 fs-5 mb-2">No result found</h3>
+                        <div class="text-muted fs-7">Please try again with a different query</div>
+                      </div>
+                      <!--end::Message-->
+                    </div>
+                    <!--end::Empty-->
+                  </div>
+                  <!--end::Wrapper-->
+                </div>
+                <!--end::Menu-->
+              </div>
+              <!--end::Search-->
+              <!--begin::Github-->
+              <div class="app-navbar-item ms-1 ms-lg-3">
+                <a href="https://github.com/takuya-motoshima" target="_blank" class="btn btn-icon btn-custom btn-icon-muted btn-active-light w-35px h-35px w-md-40px h-md-40px">
+                  <img alt="Github" src="theme/media/svg/social-logos/github.svg" class="h-20px">
+                </a>
+              </div>
+              <!--end::Github-->
+              <!--begin::Twitter-->
+              <div class="app-navbar-item ms-1 ms-lg-3">
+                <a href="https://twitter.com/TakuyaMotoshima" target="_blank" class="btn btn-icon btn-custom btn-icon-muted btn-active-light w-35px h-35px w-md-40px h-md-40px">
+                  <img alt="Twitter" src="theme/media/svg/social-logos/twitter.svg" class="h-20px">
+                </a>
+              </div>
+              <!--end::Twitter-->
+              <!--begin::Facebook-->
+              <div class="app-navbar-item ms-1 ms-lg-3">
+                <a href="https://www.facebook.com/takuya.motoshima.7" target="_blank" class="btn btn-icon btn-custom btn-icon-muted btn-active-light w-35px h-35px w-md-40px h-md-40px">
+                  <img alt="Facebook" src="theme/media/svg/social-logos/facebook.svg" class="h-20px">
+                </a>
+              </div>
+              <!--end::Facebook-->
+            </div>
+            <!--endA::Navbar-->
+          </div>
+          <!--end::Header wrapper-->
+        </div>
+        <!--end::Header container-->
+      </div>
+      <!--end::Header-->
+      <!--begin::Wrapper-->
+      <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+        <!--begin::sidebar-->
+        <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+          <!--begin::Logo-->
+          <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+            <!--begin::Logo image-->
+            <a href="/">
+              <img alt="Logo" src="img/logos/default.svg" class="h-20px app-sidebar-logo-default" />
+              <img alt="Logo" src="img/logos/default-small.svg" class="h-20px app-sidebar-logo-minimize" />
+            </a>
+            <!--end::Logo image-->
+          </div>
+          <!--end::Logo-->
+          <!--begin::sidebar menu-->
+          <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+            <!--begin::Menu wrapper-->
+            <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+              <!--begin::Menu-->
+              <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+                <!--begin:Menu item-->
+                <div class="menu-item pt-5">
+                  <!--begin:Menu content-->
+                  <div class="menu-content">
+                    <span class="menu-heading fw-bold text-uppercase fs-7">Getting Started</span>
+                  </div>
+                  <!--end:Menu content-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                  <!--begin:Menu link-->
+                  <a class="menu-link" href="#overview">
+                    <span class="menu-title">Overview</span>
+                  </a>
+                  <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                  <!--begin:Menu link-->
+                  <a class="menu-link" href="#install">
+                    <span class="menu-title">Install</span>
+                  </a>
+                  <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item pt-5">
+                  <!--begin:Menu content-->
+                  <div class="menu-content">
+                    <span class="menu-heading fw-bold text-uppercase fs-7">REFERENCE</span>
+                  </div>
+                  <!--end:Menu content-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div data-kt-menu-trigger="click" class="menu-item menu-accordion hover show">
+                  <!--begin:Menu link-->
+                  <span class="menu-link">
+                    <span class="menu-title">Storage Classes</span>
+                    <span class="menu-arrow"></span>
+                  </span>
+                  <!--end:Menu link-->
+                  <!--begin:Menu sub-->
+                  <div class="menu-sub menu-sub-accordion show">
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                      <!--begin:Menu link-->
+                      <a class="menu-link" href="#aes-storage">
+                        <span class="menu-bullet">
+                          <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">AES Storage</span>
+                      </a>
+                      <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                      <!--begin:Menu link-->
+                      <a class="menu-link" href="#des-storage">
+                        <span class="menu-bullet">
+                          <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">DES Storage</span>
+                      </a>
+                      <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                      <!--begin:Menu link-->
+                      <a class="menu-link" href="#triple-des-storage">
+                        <span class="menu-bullet">
+                          <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Triple DES Storage</span>
+                      </a>
+                      <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                      <!--begin:Menu link-->
+                      <a class="menu-link" href="#rabbit-storage">
+                        <span class="menu-bullet">
+                          <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Rabbit Storage</span>
+                      </a>
+                      <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                    <!--begin:Menu item-->
+                    <div class="menu-item">
+                      <!--begin:Menu link-->
+                      <a class="menu-link" href="#rc4-storage">
+                        <span class="menu-bullet">
+                          <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">RC4 Storage</span>
+                      </a>
+                      <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                  </div>
+                  <!--end:Menu sub-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                  <!--begin:Menu link-->
+                  <a class="menu-link" href="#changelog">
+                    <span class="menu-title">Changelog</span>
+                  </a>
+                  <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+              </div>
+              <!--end::Menu-->
+            </div>
+            <!--end::Menu wrapper-->
+          </div>
+          <!--end::sidebar menu-->
+        </div>
+        <!--end::sidebar-->
+        <!--begin::Main-->
+        <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+          <!--begin::Content wrapper-->
+          <div class="d-flex flex-column flex-column-fluid">
+            <!--begin::Content-->
+            <div id="kt_app_content" class="app-content flex-column-fluid">
+              <!--begin::Content container-->
+              <div id="kt_app_content_container" class="app-container container-xxl">
+                <!--begin::Card-->
+                <div id="overview" data-search-item="true" data-search-title="Overview" data-search-description="Introduction &amp; Getting Started" class="card card-docs flex-row-fluid mb-12">
+                  <!--begin::Card Body-->
+                  <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                    <!--begin::Section-->
+                    <div class="px-md-10 pt-md-10 pb-md-5">
+                      <!--begin::Block-->
+                      <div class="text-center mb-20">
+                        <h1 class="fs-2tx fw-bold">CryptoStorage</h1>
+                        <div class="fw-semibold fs-2 text-gray-500 mb-10">CryptoStorage stores data in a local storeage using standard and secure encryption algorithms.</div>
+                      </div>
+                      <!--end::Block-->
+                      <!--begin::Row-->
+                      <div class="row g-0">
+                        <!--begin::Col-->
+                        <div class="col-md-6 mb-10">
+                          <div class="bg-light bg-opacity-50 rounded-3 p-10 mx-md-5 h-md-100">
+                            <div class="d-flex flex-center w-60px h-60px rounded-3 bg-light-success bg-opacity-90 mb-10">
+                              <!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
+                              <span class="svg-icon svg-icon-success svg-icon-3x">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path opacity="0.3" d="M22.1 11.5V12.6C22.1 13.2 21.7 13.6 21.2 13.7L19.9 13.9C19.7 14.7 19.4 15.5 18.9 16.2L19.7 17.2999C20 17.6999 20 18.3999 19.6 18.7999L18.8 19.6C18.4 20 17.8 20 17.3 19.7L16.2 18.9C15.5 19.3 14.7 19.7 13.9 19.9L13.7 21.2C13.6 21.7 13.1 22.1 12.6 22.1H11.5C10.9 22.1 10.5 21.7 10.4 21.2L10.2 19.9C9.4 19.7 8.6 19.4 7.9 18.9L6.8 19.7C6.4 20 5.7 20 5.3 19.6L4.5 18.7999C4.1 18.3999 4.1 17.7999 4.4 17.2999L5.2 16.2C4.8 15.5 4.4 14.7 4.2 13.9L2.9 13.7C2.4 13.6 2 13.1 2 12.6V11.5C2 10.9 2.4 10.5 2.9 10.4L4.2 10.2C4.4 9.39995 4.7 8.60002 5.2 7.90002L4.4 6.79993C4.1 6.39993 4.1 5.69993 4.5 5.29993L5.3 4.5C5.7 4.1 6.3 4.10002 6.8 4.40002L7.9 5.19995C8.6 4.79995 9.4 4.39995 10.2 4.19995L10.4 2.90002C10.5 2.40002 11 2 11.5 2H12.6C13.2 2 13.6 2.40002 13.7 2.90002L13.9 4.19995C14.7 4.39995 15.5 4.69995 16.2 5.19995L17.3 4.40002C17.7 4.10002 18.4 4.1 18.8 4.5L19.6 5.29993C20 5.69993 20 6.29993 19.7 6.79993L18.9 7.90002C19.3 8.60002 19.7 9.39995 19.9 10.2L21.2 10.4C21.7 10.5 22.1 11 22.1 11.5ZM12.1 8.59998C10.2 8.59998 8.6 10.2 8.6 12.1C8.6 14 10.2 15.6 12.1 15.6C14 15.6 15.6 14 15.6 12.1C15.6 10.2 14 8.59998 12.1 8.59998Z" fill="currentColor"></path>
+                                  <path d="M17.1 12.1C17.1 14.9 14.9 17.1 12.1 17.1C9.30001 17.1 7.10001 14.9 7.10001 12.1C7.10001 9.29998 9.30001 7.09998 12.1 7.09998C14.9 7.09998 17.1 9.29998 17.1 12.1ZM12.1 10.1C11 10.1 10.1 11 10.1 12.1C10.1 13.2 11 14.1 12.1 14.1C13.2 14.1 14.1 13.2 14.1 12.1C14.1 11 13.2 10.1 12.1 10.1Z" fill="currentColor"></path>
+                                </svg>
+                              </span>
+                              <!--end::Svg Icon-->
+                            </div>
+                            <h1 class="mb-5">Install</h1>
+                            <div class="fs-4 text-gray-600 py-3">"crypto-js-storage" can be installed and used from NPM.</div>
+                            <a href="#install" class="btn btn-lg btn-flex btn-link btn-color-success">Install now 
+                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                            <span class="svg-icon ms-2 svg-icon-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                              </svg>
+                            </span>
+                            <!--end::Svg Icon--></a>
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6 mb-10">
+                          <div class="bg-light bg-opacity-50 rounded-3 p-10 mx-md-5 h-md-100">
+                            <div class="d-flex flex-center w-60px h-60px rounded-3 bg-light-success bg-opacity-90 mb-10">
+                              <!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
+                              <span class="svg-icon svg-icon-success svg-icon-3x">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="currentColor"></path>
+                                  <path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="currentColor"></path>
+                                </svg>
+                              </span>
+                              <!--end::Svg Icon-->
+                            </div>
+                            <h1 class="mb-5">Reference</h1>
+                            <div class="fs-4 text-gray-600 py-3">Top of Reference.</div>
+                            <a href="#environment-variable" class="btn btn-lg btn-flex btn-link btn-color-success">Learn more 
+                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                            <span class="svg-icon ms-2 svg-icon-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                              </svg>
+                            </span>
+                            <!--end::Svg Icon--></a>
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                        <!--begin::Col-->
+                        <div class="col-md-6 mb-10">
+                          <div class="bg-light bg-opacity-50 rounded-3 p-10 mx-md-5 h-md-100">
+                            <h1 class="mb-5">Changelog</h1>
+                            <a href="#changelog" class="btn btn-lg btn-flex btn-link btn-color-success">Learn more 
+                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                            <span class="svg-icon ms-2 svg-icon-3">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor"></path>
+                              </svg>
+                            </span>
+                            <!--end::Svg Icon--></a>
+                          </div>
+                        </div>
+                        <!--end::Col-->
+                      </div>
+                      <!--end::Row-->
+                    </div>
+                    <!--end::Section-->
+                  </div>
+                  <!--end::Card Body-->
+                </div>
+                <!--end::Card-->
+                <!--begin::Card-->
+                <div id="install" data-search-item="true" data-search-title="Install" data-search-description="How to Install" class="card card-docs flex-row-fluid mb-12">
+                  <!--begin::Card Body-->
+                  <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                    <!--begin::Section-->
+                    <div class="py-10">
+                      <!--begin::Heading-->
+                      <h1 class="fs-2tx fw-bold mb-5">Install</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">Install with <a href="https://www.npmjs.com/package/crypto-js-storage">NPM</a></div>
+                      <!--end::Block-->
+                      <!--begin::Code-->
+                      <div class="py-5">
+                        <!--begin::Highlight-->
+                        <div class="highlight">
+                          <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                          <div class="highlight-code">
+                            <pre class="language-bash"><code class="language-bash">npm install --save crypto-js-storage</code></pre>
+                          </div>
+                        </div>
+                        <!--end::Highlight-->
+                      </div>
+                      <!--end::Code-->
+                    </div>
+                    <!--end::Section-->
+                  </div>
+                  <!--end::Card Body-->
+                </div>
+                <!--end::Card-->
+                <!--begin::Card-->
+                <div id="storages" data-search-item="true" data-search-title="Storage Classes" data-search-description="About storage with cryptographic algorithms" class="card card-docs flex-row-fluid mb-12">
+                  <!--begin::Card Body-->
+                  <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                    <!--begin::Section-->
+                    <div class="pb-10">
+                      <!--begin::Heading-->
+                      <h1 class="fs-2tx fw-bold mb-5">Storage Classes</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">About storage with cryptographic algorithms.</div>
+                      <!--end::Block-->
+                    </div>
+                    <!--end::Section-->
+                    <!--begin::Section-->
+                    <div id="aes-storage" class="py-10">
+                      <!--begin::Heading-->
+                      <h1 class="fw-bold mb-5">AES Storage</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">
+                        The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS).<br>
+                        It was selected after a 5-year process where 15 competing designs were evaluated.
+                      </div>
+                      <!--end::Block-->
+                      <!--begin::Code-->
+                      <div class="py-5">
+                        <!--begin::Highlight-->
+                        <div class="highlight">
+                          <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                          <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#aes-storage-for-esm" role="tab">ESM</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#aes-storage-for-js" role="tab">JS</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="aes-storage-for-esm" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-javascript" style="max-height:400px"><code class="language-javascript">import {AesStorage} from &#039;crypto-js-storage&#039;;
+
+AesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = AesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom</code></pre>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="aes-storage-for-js" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-html" style="max-height:400px"><code class="language-html">&lt;script src=&quot;node_modules/crypto-js-storage/dist/build.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+const {AesStorage} = window.CryptoJsStorage;
+
+AesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = AesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom
+&lt;/script&gt;</code></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Highlight-->
+                      </div>
+                      <!--end::Code-->
+                      <h2 class="text-gray-700 py-5 fw-normal">Static Methods of the AES Storage</h2>
+                      <!--begin::Table-->
+                      <div class="py-2">
+                        <!--begin::Table wrapper-->
+                        <div class="table-responsive border rounded">
+                          <!--begin::Table-->
+                          <table class="table table-striped mb-0 g-6">
+                            <!--begin::Head-->
+                            <thead>
+                              <tr class="fs-4 fw-bold p-6">
+                                <th class="min-w-200px">Method</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <!--end::Head-->
+                            <!--begin::Body-->
+                            <tbody>
+                              <tr>
+                                <td class="mw-250px"><code>setItem(key: string, value: string, secret: string): void</code></td>
+                                <td>
+                                  Save Data to Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">AesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>getItem(key: string, secret :string): string|null</code></td>
+                                <td>
+                                  Read Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">const cat = AesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>removeItem(key: string): void</code></td>
+                                <td>
+                                  Remove Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">AesStorage.removeItem(&#039;myCat&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>clear(): void</code></td>
+                                <td>
+                                  Remove All (Clear Local Storage).
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">AesStorage.clear();</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                            </tbody>
+                            <!--end::Body-->
+                          </table>
+                          <!--end::Table-->
+                        </div>
+                        <!--end::Table wrapper-->
+                      </div>
+                      <!--end::Table-->
+                    </div>
+                    <!--end::Section-->
+                    <!--begin::Section-->
+                    <div id="des-storage" class="py-10">
+                      <!--begin::Heading-->
+                      <h1 class="fw-bold mb-5">DES Storage</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">
+                        DES is a previously dominant algorithm for encryption, and was published as an official Federal Information Processing Standard (FIPS).<br>
+                        DES is now considered to be insecure due to the small key size.
+                      </div>
+                      <!--end::Block-->
+                      <!--begin::Code-->
+                      <div class="py-5">
+                        <!--begin::Highlight-->
+                        <div class="highlight">
+                          <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                          <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#des-storage-for-esm" role="tab">ESM</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#des-storage-for-js" role="tab">JS</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="des-storage-for-esm" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-javascript" style="max-height:400px"><code class="language-javascript">import {DesStorage} from &#039;crypto-js-storage&#039;;
+
+DesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = DesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom</code></pre>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="des-storage-for-js" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-html" style="max-height:400px"><code class="language-html">&lt;script src=&quot;node_modules/crypto-js-storage/dist/build.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+const {DesStorage} = window.CryptoJsStorage;
+
+DesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = DesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom
+&lt;/script&gt;</code></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Highlight-->
+                      </div>
+                      <!--end::Code-->
+                      <h2 class="text-gray-700 py-5 fw-normal">Static Methods of the DES Storage</h2>
+                      <!--begin::Table-->
+                      <div class="py-2">
+                        <!--begin::Table wrapper-->
+                        <div class="table-responsive border rounded">
+                          <!--begin::Table-->
+                          <table class="table table-striped mb-0 g-6">
+                            <!--begin::Head-->
+                            <thead>
+                              <tr class="fs-4 fw-bold p-6">
+                                <th class="min-w-200px">Method</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <!--end::Head-->
+                            <!--begin::Body-->
+                            <tbody>
+                              <tr>
+                                <td class="mw-250px"><code>setItem(key: string, value: string, secret: string): void</code></td>
+                                <td>
+                                  Save Data to Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">DesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>getItem(key: string, secret :string): string|null</code></td>
+                                <td>
+                                  Read Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">const cat = DesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>removeItem(key: string): void</code></td>
+                                <td>
+                                  Remove Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">DesStorage.removeItem(&#039;myCat&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>clear(): void</code></td>
+                                <td>
+                                  Remove All (Clear Local Storage).
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">DesStorage.clear();</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                            </tbody>
+                            <!--end::Body-->
+                          </table>
+                          <!--end::Table-->
+                        </div>
+                        <!--end::Table wrapper-->
+                      </div>
+                      <!--end::Table-->
+                    </div>
+                    <!--end::Section-->
+                    <!--begin::Section-->
+                    <div id="triple-des-storage" class="py-10">
+                      <!--begin::Heading-->
+                      <h1 class="fw-bold mb-5">Triple DES Storage</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">
+                        Triple DES applies DES three times to each block to increase the key size.<br>
+                        The algorithm is believed to be secure in this form.
+                      </div>
+                      <!--end::Block-->
+                      <!--begin::Code-->
+                      <div class="py-5">
+                        <!--begin::Highlight-->
+                        <div class="highlight">
+                          <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                          <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#triple-des-storage-for-esm" role="tab">ESM</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#triple-des-storage-for-js" role="tab">JS</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="triple-des-storage-for-esm" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-javascript" style="max-height:400px"><code class="language-javascript">import {TripleDesStorage} from &#039;crypto-js-storage&#039;;
+
+TripleDesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = TripleDesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom</code></pre>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="triple-des-storage-for-js" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-html" style="max-height:400px"><code class="language-html">&lt;script src=&quot;node_modules/crypto-js-storage/dist/build.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+const {TripleDesStorage} = window.CryptoJsStorage;
+
+TripleDesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = TripleDesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom
+&lt;/script&gt;</code></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Highlight-->
+                      </div>
+                      <!--end::Code-->
+                      <h2 class="text-gray-700 py-5 fw-normal">Static Methods of the Triple DES Storage</h2>
+                      <!--begin::Table-->
+                      <div class="py-2">
+                        <!--begin::Table wrapper-->
+                        <div class="table-responsive border rounded">
+                          <!--begin::Table-->
+                          <table class="table table-striped mb-0 g-6">
+                            <!--begin::Head-->
+                            <thead>
+                              <tr class="fs-4 fw-bold p-6">
+                                <th class="min-w-200px">Method</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <!--end::Head-->
+                            <!--begin::Body-->
+                            <tbody>
+                              <tr>
+                                <td class="mw-250px"><code>setItem(key: string, value: string, secret: string): void</code></td>
+                                <td>
+                                  Save Data to Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">TripleDesStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>getItem(key: string, secret :string): string|null</code></td>
+                                <td>
+                                  Read Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">const cat = TripleDesStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>removeItem(key: string): void</code></td>
+                                <td>
+                                  Remove Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">TripleDesStorage.removeItem(&#039;myCat&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>clear(): void</code></td>
+                                <td>
+                                  Remove All (Clear Local Storage).
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">TripleDesStorage.clear();</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                            </tbody>
+                            <!--end::Body-->
+                          </table>
+                          <!--end::Table-->
+                        </div>
+                        <!--end::Table wrapper-->
+                      </div>
+                      <!--end::Table-->
+                    </div>
+                    <!--end::Section-->
+                    <!--begin::Section-->
+                    <div id="rabbit-storage" class="py-10">
+                      <!--begin::Heading-->
+                      <h1 class="fw-bold mb-5">Rabbit Storage</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">
+                        Rabbit is a high-performance stream cipher and a finalist in the eSTREAM Portfolio.<br>
+                        It is one of the four designs selected after a 3 1/2-year process where 22 designs were evaluated.
+                      </div>
+                      <!--end::Block-->
+                      <!--begin::Code-->
+                      <div class="py-5">
+                        <!--begin::Highlight-->
+                        <div class="highlight">
+                          <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                          <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#rabbit-storage-for-esm" role="tab">ESM</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#rabbit-storage-for-js" role="tab">JS</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="rabbit-storage-for-esm" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-javascript" style="max-height:400px"><code class="language-javascript">import {RabbitStorage} from &#039;crypto-js-storage&#039;;
+
+RabbitStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = RabbitStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom</code></pre>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="rabbit-storage-for-js" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-html" style="max-height:400px"><code class="language-html">&lt;script src=&quot;node_modules/crypto-js-storage/dist/build.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+const {RabbitStorage} = window.CryptoJsStorage;
+
+RabbitStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = RabbitStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom
+&lt;/script&gt;</code></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Highlight-->
+                      </div>
+                      <!--end::Code-->
+                      <h2 class="text-gray-700 py-5 fw-normal">Static Methods of the Rabbit Storage</h2>
+                      <!--begin::Table-->
+                      <div class="py-2">
+                        <!--begin::Table wrapper-->
+                        <div class="table-responsive border rounded">
+                          <!--begin::Table-->
+                          <table class="table table-striped mb-0 g-6">
+                            <!--begin::Head-->
+                            <thead>
+                              <tr class="fs-4 fw-bold p-6">
+                                <th class="min-w-200px">Method</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <!--end::Head-->
+                            <!--begin::Body-->
+                            <tbody>
+                              <tr>
+                                <td class="mw-250px"><code>setItem(key: string, value: string, secret: string): void</code></td>
+                                <td>
+                                  Save Data to Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">RabbitStorage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>getItem(key: string, secret :string): string|null</code></td>
+                                <td>
+                                  Read Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">const cat = RabbitStorage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>removeItem(key: string): void</code></td>
+                                <td>
+                                  Remove Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">RabbitStorage.removeItem(&#039;myCat&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>clear(): void</code></td>
+                                <td>
+                                  Remove All (Clear Local Storage).
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">RabbitStorage.clear();</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                            </tbody>
+                            <!--end::Body-->
+                          </table>
+                          <!--end::Table-->
+                        </div>
+                        <!--end::Table wrapper-->
+                      </div>
+                      <!--end::Table-->
+                    </div>
+                    <!--end::Section-->
+                    <!--begin::Section-->
+                    <div id="rc4-storage" class="py-10">
+                      <!--begin::Heading-->
+                      <h1 class="fw-bold mb-5">RC4 Storage</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">
+                        RC4 is a widely-used stream cipher.<br>
+                        It's used in popular protocols such as SSL and WEP.<br>
+                        Although remarkable for its simplicity and speed, the algorithm's history doesn't inspire confidence in its security.
+                      </div>
+                      <!--end::Block-->
+                      <!--begin::Code-->
+                      <div class="py-5">
+                        <!--begin::Highlight-->
+                        <div class="highlight">
+                          <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                          <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#rc4-storage-for-esm" role="tab">ESM</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#rc4-storage-for-js" role="tab">JS</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="rc4-storage-for-esm" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-javascript" style="max-height:400px"><code class="language-javascript">import {RC4Storage} from &#039;crypto-js-storage&#039;;
+
+RC4Storage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = RC4Storage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom</code></pre>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="rc4-storage-for-js" role="tabpanel">
+                              <div class="highlight-code">
+                                <pre class="language-html" style="max-height:400px"><code class="language-html">&lt;script src=&quot;node_modules/crypto-js-storage/dist/build.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+const {RC4Storage} = window.CryptoJsStorage;
+
+RC4Storage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);
+const cat = RC4Storage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);
+console.log(cat);// =&gt;Tom
+&lt;/script&gt;</code></pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Highlight-->
+                      </div>
+                      <!--end::Code-->
+                      <h2 class="text-gray-700 py-5 fw-normal">Static Methods of the RC4 Storage</h2>
+                      <!--begin::Table-->
+                      <div class="py-2">
+                        <!--begin::Table wrapper-->
+                        <div class="table-responsive border rounded">
+                          <!--begin::Table-->
+                          <table class="table table-striped mb-0 g-6">
+                            <!--begin::Head-->
+                            <thead>
+                              <tr class="fs-4 fw-bold p-6">
+                                <th class="min-w-200px">Method</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <!--end::Head-->
+                            <!--begin::Body-->
+                            <tbody>
+                              <tr>
+                                <td class="mw-250px"><code>setItem(key: string, value: string, secret: string): void</code></td>
+                                <td>
+                                  Save Data to Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">RC4Storage.setItem(&#039;myCat&#039;, &#039;Tom&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>getItem(key: string, secret :string): string|null</code></td>
+                                <td>
+                                  Read Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">const cat = RC4Storage.getItem(&#039;myCat&#039;, &#039;Secret Passphrase&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>removeItem(key: string): void</code></td>
+                                <td>
+                                  Remove Data from Local Storage.
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">RC4Storage.removeItem(&#039;myCat&#039;);</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="mw-250px"><code>clear(): void</code></td>
+                                <td>
+                                  Remove All (Clear Local Storage).
+                                  <!--begin::Code-->
+                                  <div class="py-5">
+                                    <!--begin::Highlight-->
+                                    <div class="highlight">
+                                      <button class="highlight-copy btn" data-bs-toggle="tooltip" title="Copy code">copy</button>
+                                      <div class="highlight-code">
+                                        <pre class="language-javascript"><code class="language-javascript">RC4Storage.clear();</code></pre>
+                                      </div>
+                                    </div>
+                                    <!--end::Highlight-->
+                                  </div>
+                                  <!--end::Code-->
+                                </td>
+                              </tr>
+                            </tbody>
+                            <!--end::Body-->
+                          </table>
+                          <!--end::Table-->
+                        </div>
+                        <!--end::Table wrapper-->
+                      </div>
+                      <!--end::Table-->
+                    </div>
+                    <!--end::Section-->
+                  </div>
+                  <!--end::Card Body-->
+                </div>
+                <!--end::Card-->
+                <!--begin::Card-->
+                <div id="changelog" data-search-item="true" data-search-title="Changelog" data-search-description="Version Change History" class="card card-docs flex-row-fluid mb-12">
+                  <!--begin::Card Body-->
+                  <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+                    <!--begin::Section-->
+                    <div class="pb-10">
+                      <!--begin::Heading-->
+                      <h1 class="fs-2tx fw-bold mb-5">Changelog</h1>
+                      <!--end::Heading-->
+                      <!--begin::Block-->
+                      <div class="py-5">Changelog is available <a href="https://github.com/takuya-motoshima/crypto-js-storage/blob/main/CHANGELOG.md" target="_blank">here</a>.</div>
+                      <!--end::Block-->
+                    </div>
+                    <!--end::Section-->
+                  </div>
+                  <!--end::Card Body-->
+                </div>
+                <!--end::Card-->
+              </div>
+              <!--end::Content container-->
+            </div>
+            <!--end::Content-->
+          </div>
+          <!--end::Content wrapper-->
+          <!--begin::Footer-->
+          <div id="kt_app_footer" class="app-footer">
+            <!--begin::Footer container-->
+            <div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+              <!--begin::Copyright-->
+              <div class="text-dark order-2 order-md-1">
+                <span class="text-muted fw-semibold me-1">2022©</span>
+                <a href="https://github.com/takuya-motoshima" target="_blank" class="text-gray-800 text-hover-primary">Takuya Motoshima</a>
+              </div>
+              <!--end::Copyright-->
+              <!--begin::Menu-->
+              <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1 align-items-center">
+								<!--begin::Menu item-->
+								<li class="menu-item">
+									<!--begin::Menu link-->
+									<a href="https://github.com/takuya-motoshima" target="_blank" class="menu-link px-3">
+										<img alt="Github" src="theme/media/svg/social-logos/github.svg" class="h-20px">
+									</a>
+									<!--end::Menu link-->
+								</li>
+								<!--end::Menu item-->
+								<!--begin::Menu item-->
+								<li class="menu-item">
+									<!--begin::Menu link-->
+									<a href="https://twitter.com/TakuyaMotoshima" target="_blank" class="menu-link px-3">
+										<img alt="Twitter" src="theme/media/svg/social-logos/twitter.svg" class="h-20px">
+									</a>
+									<!--end::Menu link-->
+								</li>
+								<!--end::Menu item-->
+								<!--begin::Menu item-->
+								<li class="menu-item">
+									<!--begin::Menu link-->
+									<a href="https://www.facebook.com/takuya.motoshima.7" target="_blank" class="menu-link px-3">
+										<img alt="Facebook" src="theme/media/svg/social-logos/facebook.svg" class="h-20px">
+									</a>
+									<!--end::Menu link-->
+								</li>
+								<!--end::Menu item-->
+							</ul>
+              <!--end::Menu-->
+            </div>
+            <!--end::Footer container-->
+          </div>
+          <!--end::Footer-->
+        </div>
+        <!--end:::Main-->
+      </div>
+      <!--end::Wrapper-->
+    </div>
+    <!--end::Page-->
+  </div>
+  <!--end::App-->
+
+  <!--begin::Scrolltop-->
+  <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+    <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+    <span class="svg-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+        <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+      </svg>
+    </span>
+    <!--end::Svg Icon-->
+  </div>
+  <!--end::Scrolltop-->
+
+  <!--begin::Javascript-->
+  <!--begin::Global Javascript Bundle(used by all pages)-->
+  <script src="theme/plugins/global/plugins.bundle.js"></script>
+  <script src="theme/js/scripts.bundle.js"></script>
+  <!--end::Global Javascript Bundle-->
+  <!--begin::Vendors Javascript(used by this page)-->
+  <script src="theme/plugins/custom/prismjs/prismjs.bundle.js"></script>
+  <!--end::Vendors Javascript-->
+  <!--begin::Custom Javascript(used by this page)-->
+  <script>
+    (() => {
+      function highlightCode() {
+        for (let highlight of document.querySelectorAll('.highlight')) {
+          const copy = highlight.querySelector('.highlight-copy');
+          if (copy) {
+            const clipboard = new ClipboardJS(copy, {
+              target: trigger => {
+                const highlight = trigger.closest('.highlight');
+                let el = highlight.querySelector('.tab-pane.active');
+                if (!el)
+                  el = highlight.querySelector('.highlight-code');
+                return el;
+              }
+            });
+            clipboard.on('success', evnt => {
+              const caption = evnt.trigger.innerHTML;
+              evnt.trigger.innerHTML = 'copied';
+              evnt.clearSelection();
+              setTimeout(() => {
+                evnt.trigger.innerHTML = caption;
+              }, 2000);
+            });
+          }
+        }
+      }
+
+      function intiSearchDropdown() {
+        const results = document.querySelector('#searchResults');
+        const recently = document.querySelector('#searchRecently');
+        for (let item of document.querySelectorAll('[data-search-item="true"]')) {
+          results.insertAdjacentHTML('beforeend', `<!--begin::Item-->
+            <a href="#${item.id}" data-kt-searchable="true" class="d-none d-flex flex-column text-dark text-hover-primary py-2">
+              <span class="fw-bold fs-5 mb-0">${item.dataset.searchTitle}</span>
+              <span class="fw-semibold fs-base text-muted">${item.dataset.searchDescription}</span>
+            </a>
+            <!--end::Item-->`);
+          recently.insertAdjacentHTML('beforeend', `<!--begin::Item-->
+            <a href="#${item.id}" class="d-flex flex-column text-dark text-hover-primary py-2">
+              <span class="fw-bold fs-5 mb-0">${item.dataset.searchTitle}</span>
+              <span class="fw-semibold fs-base text-muted">${item.dataset.searchDescription}</span>
+            </a>
+            <!--end::Item-->`);
+        }
+
+        const docsSearch = document.querySelector('#kt_docs_search');
+        const wrapperElement = docsSearch.querySelector('[data-kt-search-element="wrapper"]');
+        const formElement = docsSearch.querySelector('[data-kt-search-element="form"]');
+        const mainElement = docsSearch.querySelector('[data-kt-search-element="main"]');
+        const resultsElement = docsSearch.querySelector('[data-kt-search-element="results"]');
+        const emptyElement = docsSearch.querySelector('[data-kt-search-element="empty"]');
+          
+        // Initialize search handler
+        const searchObject = new KTSearch(docsSearch);
+
+        // Search handler
+        searchObject.on('kt.search.process', search => {
+          let results = 0;
+
+          // Elements
+          const searchable = [].slice.call(resultsElement.querySelectorAll('[data-kt-searchable="true"]'));
+
+          // Match elements
+          searchable.map(function (element) {  
+            const query = searchObject.getQuery();
+            if (element.innerText.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+              element.classList.remove('d-none');
+              results++;
+            } else
+              element.classList.add('d-none');
+          });
+          
+          // Hide recently viewed
+          mainElement.classList.add('d-none');
+          if (results === 0) {
+            // Hide results
+            resultsElement.classList.add('d-none');
+            // Show empty message 
+            emptyElement.classList.remove('d-none');
+          } else {
+            // Show results
+            resultsElement.classList.remove('d-none');
+            // Hide empty message 
+            emptyElement.classList.add('d-none');
+          }
+
+          // Complete search
+          search.complete();
+        });
+
+        // Clear handler
+        searchObject.on('kt.search.clear', search => {
+          // Show recently viewed
+          mainElement.classList.remove('d-none');
+          // Hide results
+          resultsElement.classList.add('d-none');
+          // Hide empty message 
+          emptyElement.classList.add('d-none');
+        });
+
+        // Disable search form submission.
+        document.querySelector('[data-kt-search-element="form"]').addEventListener('submit', evnt => {
+          evnt.preventDefault();
+        }, {passive: false});
+      }
+
+      function initMenu() {
+        const header = document.querySelector('#kt_app_header');
+        const sidebar = document.querySelector('#kt_app_sidebar');
+        const items = sidebar.querySelectorAll('.menu-link[href]');
+        for (let item of items)
+          item.addEventListener('click', evnt => {
+            // CHANGED: Do not preventDefault to enable links in the page.
+            // evnt.preventDefault();
+
+            // Deactivate the currently selected menu.
+            const activeItem = sidebar.querySelector('.menu-link.active');
+            if (activeItem)
+              activeItem.classList.remove('active');
+
+            // Activate the selected menu.
+            evnt.currentTarget.classList.add('active');
+
+            // The element to scroll to.
+            const scrollTo = document.querySelector(evnt.currentTarget.href.match(/#..*$/)[0]);
+
+            // Scroll to the target.
+            window.scroll(0, scrollTo.offsetTop - header.clientHeight);
+          }, {passive: false})
+      }
+
+      function activateAnchorMenu() {
+        if (!location.hash)
+          return;
+        const anchorMenu = document.querySelector(`#kt_app_sidebar_menu_wrapper .menu-link[href="${location.hash}"]`);
+        if (!anchorMenu)
+          return;
+        anchorMenu.classList.add('active');
+        const subMenuAccordion = anchorMenu.closest('.menu-sub');
+        if (subMenuAccordion) {
+          subMenuAccordion.classList.add('show');
+          const subMenuItem = subMenuAccordion.closest('.menu-item.menu-accordion');
+          if (subMenuItem)
+            subMenuItem.classList.add('hover', 'show');
+        }
+      }
+
+      highlightCode();
+      intiSearchDropdown();
+      initMenu();
+      activateAnchorMenu();
+    })();
+  </script>
+  <!--end::Custom Javascript-->
+  <!--end::Javascript-->
+</body>
+<!--end::Body-->
+</html>

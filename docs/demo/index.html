@@ -1,0 +1,48 @@
+<script src="../../dist/build.js"></script>
+<script>
+const {AesStorage, DesStorage, TripleDesStorage, RabbitStorage, RC4Storage} = window.CryptoJsStorage;
+
+AesStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = AesStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+DesStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = DesStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+TripleDesStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = TripleDesStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+RabbitStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = RabbitStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+RC4Storage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = RC4Storage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+</script>
+
+<script type="module">
+import {AesStorage, DesStorage, TripleDesStorage, RabbitStorage, RC4Storage} from '../../dist/build.esm.js';
+
+AesStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = AesStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+DesStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = DesStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+TripleDesStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = TripleDesStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+RabbitStorage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = RabbitStorage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+
+RC4Storage.setItem('myCat', 'Tom', 'Secret Passphrase');
+var cat = RC4Storage.getItem('myCat', 'Secret Passphrase');
+console.log(cat);// =>Tom
+</script>
