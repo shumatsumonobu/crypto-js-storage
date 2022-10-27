@@ -24,7 +24,8 @@ export default {
     json(),
     commonjs(),
     nodeResolve({
-      mainFields: ['module', 'main']
+      mainFields: ['module', 'main'],
+      browser: true
     })
   ],
   output: [
