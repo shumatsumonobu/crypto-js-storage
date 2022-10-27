@@ -1,6 +1,6 @@
 {
   "name": "crypto-js-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CryptoStorage stores data in a local storeage using standard and secure encryption algorithms.",
   "main": "dist/build.esm.js",
   "module": "dist/build.esm.js",
