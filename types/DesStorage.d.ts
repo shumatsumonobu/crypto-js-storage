@@ -1,4 +1,7 @@
 import Storage from '~/core/Storage';
-export default class extends Storage {
+/**
+ * Encrypted localStorage using the DES algorithm.
+ */
+export default class DesStorage extends Storage {
     protected static CipherAlgorithm: any;
 }

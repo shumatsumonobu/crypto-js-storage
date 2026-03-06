@@ -1,6 +1,9 @@
 import Storage from '~/core/Storage';
 import {RabbitLegacy} from 'crypto-js';
 
-export default class extends Storage {
+/**
+ * Encrypted localStorage using the Rabbit (legacy) stream cipher.
+ */
+export default class RabbitLegacyStorage extends Storage {
   protected static CipherAlgorithm: any = RabbitLegacy;
 }

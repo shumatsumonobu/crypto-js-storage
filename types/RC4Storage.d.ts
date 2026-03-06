@@ -1,4 +1,7 @@
 import Storage from '~/core/Storage';
-export default class extends Storage {
+/**
+ * Encrypted localStorage using the RC4 stream cipher.
+ */
+export default class RC4Storage extends Storage {
     protected static CipherAlgorithm: any;
 }

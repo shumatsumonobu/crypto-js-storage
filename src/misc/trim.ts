@@ -1,11 +1,13 @@
 /**
- * Remove spaces before and after a string.
+ * Trims leading and trailing whitespace (including full-width spaces) from a string.
+ * @param value    Input string (or `null`).
+ * @param toLower  If `true`, the result is also lowercased.
  */
-export default (str: string|null, toLower = false): string|null => {
-  if (str == null)
-    return str;
-  str =  str.replace(/^[\s　]+|[\s　]+$/g, '');
+export default (value: string|null, toLower = false): string|null => {
+  if (value == null)
+    return value;
+  value = value.replace(/^[\s\u3000]+|[\s\u3000]+$/g, '');
   if (toLower)
-    str = str.toLowerCase();
-  return str;
+    value = value.toLowerCase();
+  return value;
 }

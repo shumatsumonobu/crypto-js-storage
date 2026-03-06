@@ -1,4 +1,7 @@
 import Storage from '~/core/Storage';
-export default class extends Storage {
+/**
+ * Encrypted localStorage using the AES algorithm.
+ */
+export default class AesStorage extends Storage {
     protected static CipherAlgorithm: any;
 }

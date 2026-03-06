@@ -1,5 +1,5 @@
 /**
- * Check if the string is empty.
+ * Returns `true` if the string is empty or contains only whitespace.
  */
-declare const _default: (payload: string) => boolean;
+declare const _default: (value: string) => boolean;
 export default _default;
