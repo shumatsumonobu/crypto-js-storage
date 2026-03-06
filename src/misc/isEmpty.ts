@@ -1,8 +1,8 @@
 import trim from '~/misc/trim';
 
 /**
- * Check if the string is empty.
+ * Returns `true` if the string is empty or contains only whitespace.
  */
-export default (payload: string): boolean => {
-  return trim(payload) === '';
+export default (value: string): boolean => {
+  return trim(value) === '';
 }

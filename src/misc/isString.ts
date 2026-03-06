@@ -1,6 +1,6 @@
 /**
- * Check if it is a string or not.
+ * Returns `true` if the value is a string primitive or a String object.
  */
-export default (payload: any): boolean => {
-  return typeof payload === "string" || payload instanceof String;
+export default (value: any): boolean => {
+  return typeof value === 'string' || value instanceof String;
 }
